@@ -1,4 +1,4 @@
-import { Bell, Heart, Upload, User } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Link, Outlet, useNavigate } from "react-router";
 import { useAuthStore } from "../stores";
 import { useState } from "react";
@@ -52,20 +52,13 @@ const BaseLayout = () => {
           </form>
           <div className="flex items-center gap-2">
             {user ? (
-              <>
-                <button>
-                  <Upload className="h-5 w-5" />
-                  <span className="sr-only">Upload</span>
-                </button>
-                <button>
-                  <Bell className="h-5 w-5" />
-                  <span className="sr-only">Notifications</span>
-                </button>
-                <button onClick={logout} className="rounded-full">
-                  <User className="h-5 w-5" />
-                  <span className="sr-only">Profile</span>
-                </button>
-              </>
+              <button
+                onClick={logout}
+                className="bg-primary text-white px-4 py-2 rounded-full
+                            hover:bg-primary-dark transition-colors duration-200"
+              >
+                Logout
+              </button>
             ) : (
               <button
                 className="bg-primary text-white px-4 py-2 rounded-full
