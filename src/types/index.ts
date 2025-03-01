@@ -5,4 +5,5 @@ export interface Ivideo {
   channel: string;
   views: string;
   timestamp: string;
+  description: string;
 }
