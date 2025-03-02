@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const BaseLayout = () => {
   const navigate = useNavigate();
-  const { user, logout } = useAuthStore();
+  const { user, logout } = useAuthStore((state) => state);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchError, setSearchError] = useState("");
 

@@ -47,7 +47,7 @@ const initialMessages: Message[] = [
   },
 ];
 
-export function ChatInterface({ videoId }: { videoId: string }) {
+export function ChatInterface() {
   const { user } = useAuthStore();
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [newMessage, setNewMessage] = useState("");

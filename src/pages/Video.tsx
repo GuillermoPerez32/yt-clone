@@ -58,14 +58,14 @@ const Video = () => {
         </div>
 
         <div className="space-y-4">
-          <ChatInterface videoId={params.id} />
+          <ChatInterface />
 
           {/* Related Videos */}
           <div>
             <h2 className="font-semibold mb-3">Related Videos</h2>
             <div className="flex flex-col gap-4">
               {videos.map((video) => (
-                <div>
+                <div key={video.id}>
                   <Link
                     key={video.id}
                     to={`/video/${video.id}`}
